@@ -7,7 +7,7 @@
       - 
       {{ $len := len . }}
       {{ range $index, $tag := . }}
-        <a href="{{ "/tags/"}}{{ $tag }}">{{ $tag }}</a>{{ if ne (add $index 1) $len }}, {{ end }}
+      <a href="{{ "/tags/"}}{{ $tag }}" id="tag_{{ $tag }}">{{ $tag }}</a>{{ if ne (add $index 1) $len }}, {{ end }}
       {{ end }}
     {{ end }}
   </li>
